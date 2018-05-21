@@ -41,6 +41,15 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 将仓库打开后，以后的每次push / PR操作都会发送到Travis CI进行测试执行mvn test -B
 
+也可以指定构建脚本，例如：script: mvn package
+
+如果项目结构标准，pom.xml在根目录下，执行就会一切正常。但是，如果pom.xml在子目录下，就需要修改install脚本：
+
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%872.png)</br>
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%873.png)</br>
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%874.png)
+
+
 ###STEP5:Test Service 测试
 进入自己的GItHub，进入项目settings
 [![Selenium Test Status](https://img-blog.csdn.net/20170820175158760?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
