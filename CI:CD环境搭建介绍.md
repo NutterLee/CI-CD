@@ -3,6 +3,10 @@
 
 ###我们的Java项目以 Git + Maven 作为版本和依赖管理工具。
 
+###PART 1 什么是CD&CI
+----------
+
+
 ###PART 1 搭建步骤
 ----------
 ###STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI
