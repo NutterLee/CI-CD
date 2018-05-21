@@ -22,18 +22,18 @@
 ###PART 2 为什么要用CI&CD
 ----------
 ###ONE：无CD&CI
-####本地机器上写代码
-####在命令行输入 npm run unit，查看单元测试结果
-####提交代码，push 到 git 远程仓库
-####登录测试服务器，拉取代码，执行 npm run build，构建项目
-####如果测试服务器是基于 pm2 的 proxy server，还需要重启 server
+####本地机器上写代码  
+####在命令行输入 npm run unit，查看单元测试结果  
+####提交代码，push 到 git 远程仓库  
+####登录测试服务器，拉取代码，执行 npm run build，构建项目  
+####如果测试服务器是基于 pm2 的 proxy server，还需要重启 server  
 
 ###TWO：引入CD&CI
-####本地机器上写代码
-####提交代码，push 到 git 远程仓库
-####git hook 触发 jenkins 的构建 job （自动）
-####jenkins job 中拉取项目代码，运行 npm run unit 和 npm run build，如果失败，发送邮件通知相关人。（自动）
-####jenkins job 中执行测试服务器的部署脚本 （自动）
+####本地机器上写代码  
+####提交代码，push 到 git 远程仓库  
+####git hook 触发 jenkins 的构建 job （自动）  
+####jenkins job 中拉取项目代码，运行 npm run unit 和 npm run build，如果失败，发送邮件通知相关人。（自动）  
+####jenkins job 中执行测试服务器的部署脚本 （自动）  
 
 
 ###PART 3 搭建步骤
