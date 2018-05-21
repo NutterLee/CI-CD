@@ -3,7 +3,7 @@
 
 ###我们的Java项目以 Git + Maven 作为版本和依赖管理工具。
 
-
+###PART 1
 ----------
 ###STEP1: 为Travis Ci 添加配置文档 [官方教程-java](https://docs.travis-ci.com/user/languages/java/)
 
@@ -60,3 +60,6 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ```
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820215737402?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
+
+###PART 2
+----------
