@@ -5,7 +5,11 @@
 
 ###PART 1
 ----------
-###STEP1: 为Travis Ci 添加配置文档 [官方教程-java](https://docs.travis-ci.com/user/languages/java/)
+###STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI
+
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%871.png)
+
+###STEP2: 为Travis Ci 添加配置文档 [官方教程-java](https://docs.travis-ci.com/user/languages/java/)
 
 - .travis.yml:
 
@@ -20,11 +24,11 @@
 ```js
 mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ```
-###STEP2:检测配置文件是否正常
+###STEP3:检测配置文件是否正常
 测试页面-----[Travis WebLint](https://lint.travis-ci.org/znc/znc)
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820171550481?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars)
-###STEP3:与GitHub集成
+###STEP4:与GitHub集成
 通过GitHub账户登录Travis CI之后，跳转至自己账户下设置仓库：打开需要设置的仓库
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820172823604?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars)
@@ -37,7 +41,7 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 将仓库打开后，以后的每次push / PR操作都会发送到Travis CI进行测试执行mvn test -B
 
-###STEP4:Test Service 测试
+###STEP5:Test Service 测试
 进入自己的GItHub，进入项目settings
 [![Selenium Test Status](https://img-blog.csdn.net/20170820175158760?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
 
