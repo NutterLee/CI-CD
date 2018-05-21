@@ -115,7 +115,7 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 ![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%875.png)
 
-###TWO:尽早测试，不要积压代码
+###TWO: 尽早测试，不要积压代码
 
 
 
