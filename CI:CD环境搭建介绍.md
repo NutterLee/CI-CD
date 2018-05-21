@@ -7,7 +7,36 @@
 ----------
 ###ONE：持续集成
 
-###PART 1 搭建步骤
+持续集成(Continuous integration)是一种软件开发实践，即团队开发成员经常集成它们的工作，通过每个成员每天至少集成一次也就意味着每天可能会发生多次集成
+每次集成都通过自动化的构建（包括编译，发布，自动化测试）来验证，从而尽早地发现集成错误
+
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%876.png)
+
+###TWO:持续部署
+
+是通过自动化的构建、测试和部署循环来快速交付高质量的产品
+某种程度上代表了一个开发团队工程化的程度，毕竟快速运转的互联网公司人力成本会高于机器，投资机器优化开发流程化相对也提高了人的效率
+
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%877.png)
+
+###PART 2 为什么要用CI&CD
+----------
+###ONE：无CD&CI
+####本地机器上写代码
+####在命令行输入 npm run unit，查看单元测试结果
+####提交代码，push 到 git 远程仓库
+####登录测试服务器，拉取代码，执行 npm run build，构建项目
+####如果测试服务器是基于 pm2 的 proxy server，还需要重启 server
+
+###TWO：引入CD&CI
+####本地机器上写代码
+####提交代码，push 到 git 远程仓库
+####git hook 触发 jenkins 的构建 job （自动）
+####jenkins job 中拉取项目代码，运行 npm run unit 和 npm run build，如果失败，发送邮件通知相关人。（自动）
+####jenkins job 中执行测试服务器的部署脚本 （自动）
+
+
+###PART 3 搭建步骤
 ----------
 ###STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI
 
@@ -78,7 +107,7 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820215737402?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
 
-###PART 2 个人思考
+###PART 4 个人思考
 ----------
 ###ONE：CI&CD做法的核心思想
 
