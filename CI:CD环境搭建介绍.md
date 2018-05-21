@@ -26,21 +26,21 @@
 #####  登录测试服务器，拉取代码，执行 npm run build，构建项目  
 #####  如果测试服务器是基于 pm2 的 proxy server，还需要重启 server  
 
-####TWO：引入CD&CI  
-#####本地机器上写代码  
-#####提交代码，push 到 git 远程仓库  
-#####git hook 触发 jenkins 的构建 job （自动）  
-#####jenkins job 中拉取项目代码，运行 npm run unit 和 npm run build，如果失败，发送邮件通知相关人。（自动）  
-#####jenkins job 中执行测试服务器的部署脚本 （自动）  
+####  TWO：引入CD&CI  
+#####  本地机器上写代码  
+#####  提交代码，push 到 git 远程仓库  
+#####  git hook 触发 jenkins 的构建 job （自动）  
+#####  jenkins job 中拉取项目代码，运行 npm run unit 和 npm run build，如果失败，发送邮件通知相关人。（自动）  
+#####  jenkins job 中执行测试服务器的部署脚本 （自动）  
 
 
-###PART 3 搭建步骤  
+###  PART 3 搭建步骤  
 ----------
-####STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI  
+####  STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI  
 
 ![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%871.png)
 
-####STEP2: 为Travis Ci 添加配置文档 [官方教程-java](https://docs.travis-ci.com/user/languages/java/)  
+####  STEP2: 为Travis Ci 添加配置文档 [官方教程-java](https://docs.travis-ci.com/user/languages/java/)  
 
 - .travis.yml:
 
@@ -55,7 +55,7 @@
 ```js
 mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ```
-####STEP3:检测配置文件是否正常  
+####  STEP3:检测配置文件是否正常  
 
 测试页面-----[Travis WebLint](https://lint.travis-ci.org/znc/znc)
 
@@ -82,7 +82,7 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 ![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%874.png)
 
 
-####STEP5:Test Service 测试  
+####  STEP5:Test Service 测试  
 进入自己的GItHub，进入项目settings
 [![Selenium Test Status](https://img-blog.csdn.net/20170820175158760?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
 
@@ -106,15 +106,15 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820215737402?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
 
-###PART 4 个人思考  
+###  PART 4 个人思考  
 ----------
-####ONE：CI&CD做法的核心思想  
+####  ONE：CI&CD做法的核心思想  
 
 事实上难以做到事先完全了解完整的、正确的需求，那么就干脆一小块一小块的做，并且加快交付的速度和频率，使得交付物尽早在下个环节得到验证。早发现问题早返工。
 
 ![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%875.png)
 
-####TWO: 尽早测试，不要积压代码  
+####  TWO: 尽早测试，不要积压代码  
 
 
 
