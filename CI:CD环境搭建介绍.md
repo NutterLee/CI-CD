@@ -3,7 +3,7 @@
 
 ###我们的Java项目以 Git + Maven 作为版本和依赖管理工具。
 
-###PART 1
+###PART 1 搭建步骤
 ----------
 ###STEP1:访问官方网站 travis-ci.org，点击右上角的个人头像，使用 Github 账户登入 Travis CI
 
@@ -74,5 +74,15 @@ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 [![Selenium Test Status](https://img-blog.csdn.net/20170820215737402?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdGltbzExNjAxMzkyMTE=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)](https://saucelabs.com/u/handlebars) 
 
-###PART 2
+###PART 2 个人思考
 ----------
+###ONE：CI&CD做法的核心思想
+
+事实上难以做到事先完全了解完整的、正确的需求，那么就干脆一小块一小块的做，并且加快交付的速度和频率，使得交付物尽早在下个环节得到验证。早发现问题早返工。
+
+![](https://github.com/TactfulYuu/CI-CD/blob/patch-1/image/%E5%9B%BE%E7%89%875.png)
+
+###TWO:尽早测试，不要积压代码
+
+
+
